@@ -4,6 +4,13 @@ Every version: what changed and why, with the measurement behind it when there i
 Design notes and all measurements in detail (Portuguese): [docs/PROJETO.md](docs/PROJETO.md).
 Every version here becomes a GitHub release automatically (tag + these notes): `.github/workflows/release.yml` runs on each push to main. `scripts/release.sh` is the manual fallback.
 
+## v0.37.2 (2026-10-13): The kit centred on the drummer
+
+The kit diagram is laid out around where the drummer sits: the snare in the middle, between the
+knees; the two toms right in front of it; the kick to the right, under the right foot; the hi-hat
+on the left and the floor tom on the far right, with crash and ride above. Drumie's hands and feet
+follow the new layout, with a little more room at the bottom for the hands.
+
 ## v0.37.1 (2026-10-13): Floating hands and feet
 
 Drumie on the kit is now just his floating forearms, hands, sticks and feet, without the body, so
