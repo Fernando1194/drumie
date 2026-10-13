@@ -30,9 +30,10 @@ Questions, ideas or a song it gets wrong: open an [issue](../../issues).
 The app is organized like a practice room: a **Library** with your songs, and for the open song
 one section per job, in a sidebar (a narrow rail on laptops, a row of tabs on a phone):
 **Learn** (kit, grid, steps), **Play** (highway on your MIDI kit), **Train** (calibration,
-challenges, history), **Fix transcription**, **Mixer**, **Settings** (kit, pad map, timing,
-storage) and **Export**. The play bar at the bottom (play, bar, loop, speed, drums/song volume)
-stays the same in every section, so the music keeps going while you switch.
+challenges, history), **Fix transcription**, **Settings** (kit, pad map, timing, storage) and
+**Export**. The play bar at the bottom (play, bar, loop, speed, drums/song volume) stays the same
+in every section, so the music keeps going while you switch, and its **Tracks** button opens the
+mixer (a volume, mute and solo per instrument, and presets) right there, in any section.
 
 - **Library**: paste a link or upload a file, watch the analysis progress, open, analyze again
   or delete songs, search, and see the disk they use.
@@ -79,7 +80,7 @@ stays the same in every section, so the music keeps going while you switch.
 
 Keys: Space play/pause, arrows jump a bar, L toggles the loop.
 
-![Mixer](docs/img/mixer.png)
+![Tracks: the mixer opened from the play bar](docs/img/mixer.png)
 
 ## How accurate is it
 

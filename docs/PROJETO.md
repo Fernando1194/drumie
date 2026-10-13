@@ -9,7 +9,7 @@ as batidas, acha padrões e passos, e oferece um player com kit, grade, modo Ste
 Hero" para bateria eletrônica via MIDI. O código também transcreve outros instrumentos, mas essa
 parte está congelada e escondida (`MUSIC_PRACTICE_ALL_INSTRUMENTS=1` mostra).
 
-Estado atual: **v35** (13/10/2026), publicado no GitHub. Foco: bateria.
+Estado atual: **v36** (13/10/2026), publicado no GitHub. Foco: bateria.
 
 ---
 
@@ -460,3 +460,4 @@ python tests/benchmark_mdb.py drum_only             # precisão real (precisa do
 | v33 | Identidade Drumie: nome, logo com o alvo de teste no "e", mascote boneco de testes em 4 poses (Biblioteca vazia, erros, resultado dos desafios), favicon e indicador de carregando; comando `drumie` |
 | v34 | Licença: grátis e código fechado (v0.24 a v0.33 seguem MIT); THIRD_PARTY_NOTICES.md; código vai para repositório privado e uma vitrine pública mostra README, CHANGELOG e releases |
 | v35 | Níveis Completo / Médio / Fácil derivados da transcrição por regras (plugins/drum_simplify.py); grade, steps, kit e highway seguem o nível; Fix sempre no Completo |
+| v36 | Seção Mixer substituída pelo botão Tracks na barra de play (mixer em todas as seções); CSS achatado (sem aninhamento) para navegadores antigos |

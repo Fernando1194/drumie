@@ -4,6 +4,19 @@ Every version: what changed and why, with the measurement behind it when there i
 Design notes and all measurements in detail (Portuguese): [docs/PROJETO.md](docs/PROJETO.md).
 Every version here becomes a GitHub release automatically (tag + these notes): `.github/workflows/release.yml` runs on each push to main. `scripts/release.sh` is the manual fallback.
 
+## v0.36.0 (2026-10-13): The mixer in every section; buttons styled in every browser
+
+**Tracks, in the play bar.** The Mixer section is gone: a **Tracks** button in the play bar opens
+the mixer right above it, in Learn, Play, Fix, Settings and Export, so you change what you hear
+without leaving what you're doing. Same controls as before (presets, a volume with 0/25/50/75/100,
+mute and solo per instrument, the Song master), in a compact layout; open or closed is
+remembered. An old `#/mixer` link opens Learn with the Tracks open.
+
+**Buttons styled in every browser.** The player's styles were written with CSS nesting, which
+browsers before Chrome/Edge 112, Firefox 117 and Safari 16.5 ignore completely, leaving white,
+unstyled buttons. The page now gets a flattened copy that every browser reads; checked identical
+to the nested version on all 41,574 element styles of the 7 sections.
+
 ## v0.35.0 (2026-10-13): Levels: Full, Medium, Easy
 
 **Play the song before you can play all of it.** A level switch at the top of the page:
