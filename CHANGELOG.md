@@ -4,6 +4,13 @@ Every version: what changed and why, with the measurement behind it when there i
 Design notes and all measurements in detail (Portuguese): [docs/PROJETO.md](docs/PROJETO.md).
 Every version here becomes a GitHub release automatically (tag + these notes): `.github/workflows/release.yml` runs on each push to main. `scripts/release.sh` is the manual fallback.
 
+## v0.37.1 (2026-10-13): Floating hands and feet
+
+Drumie on the kit is now just his floating forearms, hands, sticks and feet, without the body, so
+the drums stay visible and the movement reads better. Each stroke is easier to see: the hand comes
+up toward you (bigger) and back between strokes while the stick shortens, then lands with a ring;
+the right foot lifts before a kick and presses on it. Both feet are marked R and L.
+
 ## v0.37.0 (2026-10-13): Song difficulty; Drumie plays the kit
 
 **Difficulty, 1 to 10.** Every song gets a rating per level (Full, Medium, Easy) and a band:

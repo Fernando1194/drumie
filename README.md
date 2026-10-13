@@ -38,9 +38,10 @@ mixer (a volume, mute and solo per instrument, and presets) right there, in any 
 - **Library**: paste a link or upload a file, watch the analysis progress, open, analyze again
   or delete songs, search, and see the disk they use.
 - **Kit seen from above**, each piece in its own color; it flashes when hit, and a ring grows
-  during the beat before its next hit. **Drumie plays it with you**: his forearms, hands (marked
-  R and L), sticks and feet move with the music, so you see which hand plays what, how it travels
-  between drums and when the right foot presses the kick (a raised stick looks shorter from above).
+  during the beat before its next hit. **Drumie plays it with you**: his floating forearms, hands
+  (marked R and L), sticks and feet move with the music, so you see which hand plays what, how it
+  travels between drums and when the right foot presses the kick (a raised hand comes up toward
+  you and its stick looks shorter from above).
 - **Drum grid** (x = cymbal, o = drum, one column per 16th note) in the same colors, scrolling
   with the music. The playhead crosses each mark exactly when it sounds; the page glides to the
   next line during the last beat of a line. Drag the grip under the grid to see 1 to 8 lines ahead.

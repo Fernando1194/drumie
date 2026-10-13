@@ -471,3 +471,4 @@ python tests/benchmark_mdb.py drum_only             # precisão real (precisa do
 | v35 | Níveis Completo / Médio / Fácil derivados da transcrição por regras (plugins/drum_simplify.py); grade, steps, kit e highway seguem o nível; Fix sempre no Completo |
 | v36 | Seção Mixer substituída pelo botão Tracks na barra de play (mixer em todas as seções); CSS achatado (sem aninhamento) para navegadores antigos |
 | v37 | Dificuldade 1-10 por música e nível (mãos/s, bumbo/s, síncope, viradas, variedade), coluna e ordenação na Biblioteca; Drumie toca no desenho do kit (antebraços, mãos R/L, baquetas, pés) com sticking de destro |
+| v37.1 | Drumie no kit só com antebraços, mãos, baquetas e pés flutuantes (sem corpo); batida mais visível |
