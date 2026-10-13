@@ -4,6 +4,24 @@ Every version: what changed and why, with the measurement behind it when there i
 Design notes and all measurements in detail (Portuguese): [docs/PROJETO.md](docs/PROJETO.md).
 Every version here becomes a GitHub release automatically (tag + these notes): `.github/workflows/release.yml` runs on each push to main. `scripts/release.sh` is the manual fallback.
 
+## v0.35.0 (2026-10-13): Levels: Full, Medium, Easy
+
+**Play the song before you can play all of it.** A level switch at the top of the page:
+- **Full**: everything Drumie heard (what you had before).
+- **Medium**: no ghost notes, everything on 8th notes (16th hi-hats become 8ths, 16th kicks and
+  snares go), fills kept on 8ths.
+- **Easy**: hi-hat or ride on quarter notes, snare and kick only on the beat, a crash only on beat 1,
+  and every fill replaced by the groove before it, so the beat keeps going.
+
+The grid, the steps, the kit and the highway (and its score) follow the level, and the level is
+remembered per song. Medium and Easy are derived from the full transcription by rules, so a fix you
+make shows up in every level; the Fix section always works on Full and switches to it. Never more
+than two hands at once; a shuffle keeps its swung upbeat.
+
+On 8 MDB recordings, Medium keeps 55 to 98% of the notes and Easy 33 to 69% (one jazz track keeps
+93% in Easy: its many short "fills" become full groove bars). A bonus: the easier levels drop most
+of what the AI gets wrong (ghost notes, soft hits).
+
 ## v0.34.0 (2026-10-13): Free, closed source
 
 **New license.** From this version on Drumie is free to use but closed source: personal,

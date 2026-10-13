@@ -9,7 +9,7 @@ as batidas, acha padrões e passos, e oferece um player com kit, grade, modo Ste
 Hero" para bateria eletrônica via MIDI. O código também transcreve outros instrumentos, mas essa
 parte está congelada e escondida (`MUSIC_PRACTICE_ALL_INSTRUMENTS=1` mostra).
 
-Estado atual: **v34** (13/10/2026), publicado no GitHub. Foco: bateria.
+Estado atual: **v35** (13/10/2026), publicado no GitHub. Foco: bateria.
 
 ---
 
@@ -321,6 +321,15 @@ atrasado pela latência que o navegador informa (`AudioContext.outputLatency`, 3
 teste) e julga no mesmo relógio. A latência só é lida com o highway aberto: abrir o AudioContext no
 meio da música fez o áudio engasgar no teste da grade (batidas do kit sem piscar).
 "Note delay" desloca só o desenho, para atrasos que o navegador não vê (Bluetooth).
+**Níveis de dificuldade (v35).** Uma transcrição só (a completa, com as edições); Médio e Fácil
+saem dela por regras, então corrigir uma vez vale para todos. Médio: sem ghost notes (batida com
+menos da metade da mediana de força da peça), tudo em colcheias. Fácil: chimbal/ride em semínimas,
+caixa e bumbo só no tempo, prato só no 1, virada vira o groove anterior (o tempo não para). Sempre
+no máximo duas mãos juntas; no Fácil o prato substitui o chimbal no mesmo instante. Shuffle
+detectado (colcheia em quiáltera cai na 4ª semicolcheia) mantém o contratempo. Medido em 8 faixas
+do MDB: Médio guarda 55 a 98% das notas, Fácil 33 a 69%. Limite: regras não entendem meio-tempo,
+condução no ride com chimbal de pé, compassos ímpares; e no jazz muitas "viradas" curtas viram
+compassos de groove inteiros (Fácil ficou com 93% das notas numa faixa).
 **Identidade Drumie (v33).** O nome vem do mascote: um boneco de testes de batida de carro que
 toca bateria, magro e desengonçado, porque aprender bateria é levar pancada. Ele reage ao
 resultado (comemora A/S, sua quando o tempo está fora, cai quando a nota fica abaixo de 60%), para o
@@ -450,3 +459,4 @@ python tests/benchmark_mdb.py drum_only             # precisão real (precisa do
 | v32 | Interface nova em seções (Biblioteca, Aprender, Tocar, Treinar, Corrigir, Mixer, Ajustes, Exportar) com servidor FastAPI no lugar do Gradio; copiar um compasso para todas as repetições; histórico dos desafios; gravação atômica |
 | v33 | Identidade Drumie: nome, logo com o alvo de teste no "e", mascote boneco de testes em 4 poses (Biblioteca vazia, erros, resultado dos desafios), favicon e indicador de carregando; comando `drumie` |
 | v34 | Licença: grátis e código fechado (v0.24 a v0.33 seguem MIT); THIRD_PARTY_NOTICES.md; código vai para repositório privado e uma vitrine pública mostra README, CHANGELOG e releases |
+| v35 | Níveis Completo / Médio / Fácil derivados da transcrição por regras (plugins/drum_simplify.py); grade, steps, kit e highway seguem o nível; Fix sempre no Completo |

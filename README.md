@@ -66,6 +66,11 @@ stays the same in every section, so the music keeps going while you switch.
   count-in, click track, a mixer with a volume/mute/solo per instrument and one-tap 0 / 25 / 50 /
   75 / 100% buttons (play along with the drums muted or low), a master volume, every slider also
   typeable, layout remembered.
+- **Levels: Full, Medium, Easy** (top of the page, remembered per song): Medium drops ghost
+  notes and plays everything on 8th notes; Easy keeps a quarter-note beat with the snare on the
+  beat and turns fills into the groove, so you can play the whole song early on. The grid, the
+  steps, the kit and the highway all follow the level. The easier levels also hide most of the
+  AI's mistakes, which are mostly ghost notes and soft hits.
 - **Fix transcription**: sensitivity per piece (kick, snare, hi-hat, toms, cymbals) and
   add/remove hits by clicking the grid. **Copy this bar to every repeat**: fix one bar and every
   other bar of the same groove gets the same hits. Your edits survive re-analysis.
