@@ -1,0 +1,37 @@
+Drumie License (free software, closed source)
+
+Copyright (c) 2026 Fernando Filho. All rights reserved.
+
+This license applies to Drumie version 0.34.0 and later. Versions 0.24.0 to 0.33.0 were
+published under the MIT License; copies of those versions obtained at the time remain under it.
+
+1. Permission. You may download, install and use Drumie free of charge, on any number of your
+   own computers, for personal and non-commercial purposes.
+
+2. Restrictions. Unless the copyright holder allows it in writing, you may not:
+   a. sell, rent, lend, sublicense or otherwise distribute Drumie or any part of it, including
+      publishing copies of it; get your copy from the official download page;
+   b. modify, adapt, translate or create derivative works of Drumie;
+   c. decompile, disassemble or reverse engineer Drumie, except to the extent the law that
+      applies to you allows it despite this restriction;
+   d. remove or change any copyright, license or attribution notice;
+   e. use the name "Drumie", its logo or its mascot for another product or service.
+
+3. Third-party components. Drumie uses software and models made by others, each under its own
+   license, listed in THIRD_PARTY_NOTICES.md. Those licenses govern those components. In
+   particular, the drum transcription model weights (ADTOF) are licensed CC BY-NC-SA 4.0 and may
+   not be used commercially.
+
+4. Your music. Drumie runs on your computer and does not send your audio anywhere. You are
+   responsible for having the right to use the music you analyze with it.
+
+5. No warranty. Drumie is provided "as is", without warranty of any kind, express or implied,
+   including fitness for a particular purpose. Transcriptions can contain mistakes.
+
+6. Limitation of liability. To the extent the law allows, the copyright holder is not liable for
+   any damage arising from the use of, or the inability to use, Drumie.
+
+7. Termination. This license ends automatically if you break its terms. You must then stop using
+   Drumie and delete your copies.
+
+8. Governing law. This license is governed by the laws of Brazil.

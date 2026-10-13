@@ -1,0 +1,41 @@
+# Every version in CHANGELOG.md becomes a GitHub release (tag + notes), automatically:
+# on each push to main, any "## vX.Y.Z (date): title" section without a release gets one,
+# tagged at the commit that added that section (or the commit in scripts/release-commits.txt).
+name: Releases from the changelog
+
+on:
+  push:
+    branches: [main]
+    paths: [CHANGELOG.md, scripts/release-commits.txt, .github/workflows/release.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create missing releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          grep -E '^## v[0-9]+\.[0-9]+\.[0-9]+ ' CHANGELOG.md | tac | while IFS= read -r line; do
+            ver="$(echo "$line" | awk '{print $2}')"
+            if gh release view "$ver" >/dev/null 2>&1; then echo "$ver: already released"; continue; fi
+            title="$(echo "$line" | sed -E 's/^## [^ ]+ \([^)]*\): //')"
+            notes="$(awk -v v="## $ver " 'index($0, v) == 1 {on = 1; next} /^## / {on = 0} on' CHANGELOG.md \
+                     | sed -e '/./,$!d')"
+            commit=""; [ -f scripts/release-commits.txt ] && commit="$(awk -v v="$ver" '$1 == v {print $2}' scripts/release-commits.txt)"
+            if [ -z "$commit" ]; then
+              commit="$(git log --format=%H -S "## $ver " -- CHANGELOG.md | tail -1)"
+            fi
+            commit="$(git rev-parse "$commit")"
+            echo "$ver -> ${commit:0:7}: $title"
+            gh release create "$ver" --target "$commit" --title "$ver: $title" --notes "$notes"
+            sleep 2
+          done
