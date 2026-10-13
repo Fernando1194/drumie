@@ -38,7 +38,9 @@ mixer (a volume, mute and solo per instrument, and presets) right there, in any 
 - **Library**: paste a link or upload a file, watch the analysis progress, open, analyze again
   or delete songs, search, and see the disk they use.
 - **Kit seen from above**, each piece in its own color; it flashes when hit, and a ring grows
-  during the beat before its next hit.
+  during the beat before its next hit. **Drumie plays it with you**: his forearms, hands (marked
+  R and L), sticks and feet move with the music, so you see which hand plays what, how it travels
+  between drums and when the right foot presses the kick (a raised stick looks shorter from above).
 - **Drum grid** (x = cymbal, o = drum, one column per 16th note) in the same colors, scrolling
   with the music. The playhead crosses each mark exactly when it sounds; the page glides to the
   next line during the last beat of a line. Drag the grip under the grid to see 1 to 8 lines ahead.
@@ -67,6 +69,10 @@ mixer (a volume, mute and solo per instrument, and presets) right there, in any 
   count-in, click track, a mixer with a volume/mute/solo per instrument and one-tap 0 / 25 / 50 /
   75 / 100% buttons (play along with the drums muted or low), a master volume, every slider also
   typeable, layout remembered.
+- **Difficulty, 1 to 10** for every song and every level (Beginner, Intermediate, Advanced,
+  Expert), from how fast the hands and the kick play, off-beat kicks and snares, fills and how many
+  different grooves the song has; the Library sorts by it (easiest or hardest first), and the
+  header says why a song rates what it does.
 - **Levels: Full, Medium, Easy** (top of the page, remembered per song): Medium drops ghost
   notes and plays everything on 8th notes; Easy keeps a quarter-note beat with the snare on the
   beat and turns fills into the groove, so you can play the whole song early on. The grid, the

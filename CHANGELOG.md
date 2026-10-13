@@ -4,6 +4,29 @@ Every version: what changed and why, with the measurement behind it when there i
 Design notes and all measurements in detail (Portuguese): [docs/PROJETO.md](docs/PROJETO.md).
 Every version here becomes a GitHub release automatically (tag + these notes): `.github/workflows/release.yml` runs on each push to main. `scripts/release.sh` is the manual fallback.
 
+## v0.37.0 (2026-10-13): Song difficulty; Drumie plays the kit
+
+**Difficulty, 1 to 10.** Every song gets a rating per level (Full, Medium, Easy) and a band:
+Beginner, Intermediate, Advanced or Expert. It weighs how many strokes per second the hands play in
+the busiest bars (35%), the kick (20%), kicks and snares on 16th off-beats (15%), the share of
+bars that are fills (10%), and how many different grooves and one-off bars there are (20%). It rates
+the notes, not the BPM, so a song detected at half or double tempo rates the same. The Library has
+a Difficulty column and sorts easiest or hardest first; the header shows the open song's rating at
+the chosen level, with the reasons on hover. Ratings are cached and redone when you fix the song.
+On MDB Drums the order looks right (country and plain rock 1 to 2.5, disco and punk around 4,
+funk and fusion 5 to 6, latin and modal jazz 6.4 to 7.3), but the weights are a first guess: tell
+me songs whose rating feels wrong.
+
+**Drumie plays the kit.** On the kit diagram, Drumie's forearms, hands (R and L), sticks and feet
+move with the music: the hand travels to the next drum just before its hit, the stick is raised
+between strokes (shorter when seen from above) and lands on the hit with a ring, and the right foot
+presses the kick pedal. Hands follow right-handed sticking: right hand crossed over to the hi-hat,
+left on the snare, crash and floor tom on the right, fast fills and rolls alternating. A **Drumie**
+button next to Kit hides or shows him.
+
+Also: a groove played on the toms in most bars is no longer treated as one long fill by the Easy
+level (it used to come out empty).
+
 ## v0.36.0 (2026-10-13): The mixer in every section; buttons styled in every browser
 
 **Tracks, in the play bar.** The Mixer section is gone: a **Tracks** button in the play bar opens

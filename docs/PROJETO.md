@@ -9,7 +9,7 @@ as batidas, acha padrões e passos, e oferece um player com kit, grade, modo Ste
 Hero" para bateria eletrônica via MIDI. O código também transcreve outros instrumentos, mas essa
 parte está congelada e escondida (`MUSIC_PRACTICE_ALL_INSTRUMENTS=1` mostra).
 
-Estado atual: **v36** (13/10/2026), publicado no GitHub. Foco: bateria.
+Estado atual: **v37** (13/10/2026), publicado no GitHub. Foco: bateria.
 
 ---
 
@@ -321,6 +321,15 @@ atrasado pela latência que o navegador informa (`AudioContext.outputLatency`, 3
 teste) e julga no mesmo relógio. A latência só é lida com o highway aberto: abrir o AudioContext no
 meio da música fez o áudio engasgar no teste da grade (batidas do kit sem piscar).
 "Note delay" desloca só o desenho, para atrasos que o navegador não vê (Bluetooth).
+**Dificuldade da música (v37).** Nota 1 a 10 por nível: mãos por segundo nos compassos mais
+cheios (percentil 90, peso 35%), bumbo por segundo (20%), bumbo/caixa em semicolcheias fora do tempo
+(15%), proporção de compassos de virada (10%), número de grooves e compassos únicos (20%); nota =
+1 + 9 x soma^0,75. Conta notas por segundo e não BPM, para não errar com andamento detectado pela
+metade ou em dobro. No MDB a ordem faz sentido (country/rock simples 1-2,5; disco/punk ~4; funk e
+fusion 5-6; latin e modal jazz 6,4-7,3). Pesos são palpite inicial: calibrar com músicas que o
+Fernando conhece. **Drumie no kit (v37):** mão por batida com custo (preferência de destro + custo
+de velocidade < 75/130 ms para alternar em rulos e viradas); braço por cinemática inversa de dois
+segmentos a partir do ombro; baqueta levantada fica mais curta vista de cima.
 **Níveis de dificuldade (v35).** Uma transcrição só (a completa, com as edições); Médio e Fácil
 saem dela por regras, então corrigir uma vez vale para todos. Médio: sem ghost notes (batida com
 menos da metade da mediana de força da peça), tudo em colcheias. Fácil: chimbal/ride em semínimas,
@@ -461,3 +470,4 @@ python tests/benchmark_mdb.py drum_only             # precisão real (precisa do
 | v34 | Licença: grátis e código fechado (v0.24 a v0.33 seguem MIT); THIRD_PARTY_NOTICES.md; código vai para repositório privado e uma vitrine pública mostra README, CHANGELOG e releases |
 | v35 | Níveis Completo / Médio / Fácil derivados da transcrição por regras (plugins/drum_simplify.py); grade, steps, kit e highway seguem o nível; Fix sempre no Completo |
 | v36 | Seção Mixer substituída pelo botão Tracks na barra de play (mixer em todas as seções); CSS achatado (sem aninhamento) para navegadores antigos |
+| v37 | Dificuldade 1-10 por música e nível (mãos/s, bumbo/s, síncope, viradas, variedade), coluna e ordenação na Biblioteca; Drumie toca no desenho do kit (antebraços, mãos R/L, baquetas, pés) com sticking de destro |
