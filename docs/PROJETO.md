@@ -281,6 +281,16 @@ página não sabe com segurança quando foi fechada) e streaming (a separação 
 ### 4.8 Testado e descartado
 - **Chimbal aberto x fechado pelo som:** não generaliza entre músicas (a 70% de precisão, quase
   nenhum aberto encontrado). Não entrou no app.
+- **Separar as peças da bateria antes (drumsep, MDX23C de 6 faixas, out/2026):** medido no MDB
+  (23 faixas só de bateria). Melhor variante: maior ativação de chimbal entre o ADTOF na bateria e o
+  ADTOF na faixa de chimbal separada: F1 do chimbal 0,863 -> 0,894, mas o ganho vem quase todo de
+  UMA faixa (ModalJazz, chimbal de pé: 0 -> 0,90); chimbal de pé 44% -> 79% encontrado, fechado e
+  aberto iguais. Faixa a faixa: 5 melhores, 4 piores (Punk -0,04, FunkJazz -0,02, Disco, Britpop),
+  11 iguais. Outras variantes (ADTOF só na faixa de chimbal, só nos pratos, filtrar pela energia
+  da faixa) ficaram iguais ou piores; pratos pioraram (0,869 -> 0,802). Custo: ~10x a duração da
+  música em 2 núcleos sem placa de vídeo, modelo de 418 MB, licença dos pesos indefinida (tratar
+  como não comercial). Não entrou: para rock/pop é neutro ou pior. Talvez valha como opção
+  "chimbal de pé" para jazz, se um dia houver demanda.
 - **Outras percussões (pandeirola, cowbell, shaker):** o modelo só conhece 5 famílias; das 32
   pandeirolas do MDB, 29 viraram "chimbal". Modelos maiores (YourMT3+, Omnizart) não foram
   validados. Além disso, a TDX-N1 não tem pads para essas peças: elas ficam no áudio de
