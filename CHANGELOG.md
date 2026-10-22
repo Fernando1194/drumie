@@ -4,6 +4,16 @@ Every version: what changed and why, with the measurement behind it when there i
 Design notes and all measurements in detail (Portuguese): [docs/PROJETO.md](docs/PROJETO.md).
 Every version here becomes a GitHub release automatically (tag + these notes): `.github/workflows/release.yml` runs on each push to main. `scripts/release.sh` is the manual fallback.
 
+## v0.38.1 (2026-10-22): A Drum kit tab in Tracks; Drumie back on the kit
+
+**Tracks has two tabs.** "Instruments" keeps the song's tracks (Song, Vocals, Drums, Bass...) and
+the Hear presets; "Drum kit" has the split button, Practice one piece and the six piece volumes. With
+the drums split, the panel was too crowded in one view. The tab you used last is remembered, and
+after a split Tracks opens on Drum kit.
+
+**Fix:** in v0.38.0 Drumie's hands and feet were drawn in the bottom-left corner, outside the kit
+(an SVG has no offsetWidth, so the size came out as NaN). They are back on the drums.
+
 ## v0.38.0 (2026-10-22): Practice one piece
 
 **Split the drums into pieces.** In Tracks, "Split the drums" separates the drum track into kick,

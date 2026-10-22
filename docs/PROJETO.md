@@ -492,3 +492,4 @@ python tests/benchmark_mdb.py drum_only             # precisão real (precisa do
 | v37.1 | Drumie no kit só com antebraços, mãos, baquetas e pés flutuantes (sem corpo); batida mais visível |
 | v37.2 | Desenho do kit centrado no baterista: caixa no meio (entre as pernas), tons à frente, bumbo à direita |
 | v38 | Separar a bateria em peças (DrumSep, opcional, sob pedido) e "Praticar uma peça": muta a peça, o resto toca, a grade destaca a linha; volume por peça em Tracks; membros do Drumie movidos pelo compositor |
+| v38.1 | Tracks com duas abas (Instrumentos, Kit de bateria); corrige Drumie desenhado fora do kit na v38 |
