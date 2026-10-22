@@ -82,6 +82,9 @@ mixer (a volume, mute and solo per instrument, and presets) right there, in any 
 - **Practice one piece**: split the drums into kick, snare, toms, hi-hat, ride and crash (optional
   model), then mute just the piece you want to play while the rest of the kit keeps going; the grid
   dims the other rows. Each piece also gets its own volume in Tracks.
+- **Compare with a tab**: attach a drum tab of the song (MIDI or Guitar Pro 3-5) to see, per piece
+  and bar by bar, where the transcription agrees with it; the tab's notes the AI missed show as
+  rings on the grid, one click adds them.
 - **Fix transcription**: sensitivity per piece (kick, snare, hi-hat, toms, cymbals) and
   add/remove hits by clicking the grid. **Copy this bar to every repeat**: fix one bar and every
   other bar of the same groove gets the same hits. Your edits survive re-analysis.

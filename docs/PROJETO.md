@@ -9,7 +9,7 @@ as batidas, acha padrões e passos, e oferece um player com kit, grade, modo Ste
 Hero" para bateria eletrônica via MIDI. O código também transcreve outros instrumentos, mas essa
 parte está congelada e escondida (`MUSIC_PRACTICE_ALL_INSTRUMENTS=1` mostra).
 
-Estado atual: **v38** (22/10/2026), publicado no GitHub. Foco: bateria.
+Estado atual: **v39** (22/10/2026), publicado no GitHub. Foco: bateria.
 
 ---
 
@@ -304,6 +304,20 @@ bumbo 96%, caixa 88%, tons 85%, chimbal 79%, ride 76% da energia na faixa certa.
 uma peça e tocar por cima; não é isolamento perfeito. Identificar o "tipo de kit" foi avaliado e
 adiado: sem caso real em que mudaria a transcrição.
 
+**Comparar com uma tablatura (v39).** O MDB só tem gravações de bateria isolada; para medir em
+músicas reais o gabarito é uma tablatura (MIDI ou Guitar Pro 3-5) que o Fernando confia. A tablatura
+fica guardada em compassos (posição = compasso + fração), não em segundos. Alinhamento: desloca a
+tablatura um tempo por vez e testa 1, 2 ou 1/2 compasso da música por compasso da tablatura,
+ficando com a posição em que mais bumbo, caixa e chimbal caem na mesma semicolcheia; dá para
+ajustar à mão. Comparação na grade de semicolcheias do próprio grid, por família (qual tom e
+crash x ride não contam: tablaturas divergem aí). `drumie --compare-tabs` soma tudo, versão da IA
+(sensibilidade padrão, sem edições) e versão atual. Próximo passo: refazer o teste do drumsep e de
+"kit da música" neste gabarito.
+
+**Passos = compasso real (v39).** O modo Passos desenhava o compasso "mais típico" do groove; uma
+variação não aparecia (o grid estava certo). Agora desenha o compasso tocado; repetições idênticas
+reaproveitam o desenho.
+
 ### 4.9 Player
 - Página única: o áudio toca no navegador; Python só monta o HTML com os dados.
 - Mixer: cada faixa vira uma cópia Opus pequena, baixada inteira para a memória (o Chrome limita
@@ -493,3 +507,4 @@ python tests/benchmark_mdb.py drum_only             # precisão real (precisa do
 | v37.2 | Desenho do kit centrado no baterista: caixa no meio (entre as pernas), tons à frente, bumbo à direita |
 | v38 | Separar a bateria em peças (DrumSep, opcional, sob pedido) e "Praticar uma peça": muta a peça, o resto toca, a grade destaca a linha; volume por peça em Tracks; membros do Drumie movidos pelo compositor |
 | v38.1 | Tracks com duas abas (Instrumentos, Kit de bateria); corrige Drumie desenhado fora do kit na v38 |
+| v39 | Comparar com uma tablatura (MIDI, Guitar Pro 3-5): alinhamento automático, concordância por peça e por compasso, marcas no grid; `drumie --compare-tabs`; Passos mostram o compasso real (não o "típico") |

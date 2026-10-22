@@ -20,6 +20,7 @@ software and models, each under its own license. Their licenses apply to them, n
 | NumPy, SciPy, soundfile | BSD |
 | librosa | ISC |
 | pretty_midi | MIT |
+| PyGuitarPro (reading Guitar Pro 3-5 files) | LGPL-3.0, used unmodified as a separate package |
 | ONNX Runtime | MIT |
 | yt-dlp | Unlicense (public domain) |
 | FastAPI | MIT |

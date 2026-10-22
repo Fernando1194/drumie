@@ -4,6 +4,27 @@ Every version: what changed and why, with the measurement behind it when there i
 Design notes and all measurements in detail (Portuguese): [docs/PROJETO.md](docs/PROJETO.md).
 Every version here becomes a GitHub release automatically (tag + these notes): `.github/workflows/release.yml` runs on each push to main. `scripts/release.sh` is the manual fallback.
 
+## v0.39.0 (2026-10-22): Compare with a tab; Steps show the real bar
+
+**Compare with a tab** (in Fix transcription). Attach a drum tab of the song you trust: MIDI, or
+Guitar Pro 3, 4 or 5 (repeats and alternate endings are played out). Drumie lines it up with the
+song by itself (finding a count-in or intro the song doesn't have, and a song read at half or double
+the tab's speed) and shows the agreement per piece (kick, snare, hi-hat, toms, cymbals), the bars
+that agree least, and on the grid: a dashed ring where the tab has a note the transcription
+doesn't (click it to add the note), a red ring around a note the tab doesn't have. The placement can
+be moved a bar or a beat at a time. A note matches when the same piece is on the same 16th; which
+tom, and crash vs ride, don't count against it, since tabs differ there. Newer Guitar Pro files
+(.gp, .gpx) aren't read: export them as MIDI.
+
+`drumie --compare-tabs` prints the agreement of every song that has a tab, for the AI's own version
+(default sensitivity, no edits) and with your edits, and the total. It is the answer key for real
+songs: any change to the transcription gets measured on it before and after.
+
+**Steps show the bar being played.** The Steps view drew the most typical bar of each groove,
+so a variation (an extra kick, an open hi-hat) didn't show there although the grid had it. Now it
+draws the actual bar; identical repeats still reuse the drawing (no flicker), and a bar that
+differs from the groove is labeled "(variation)".
+
 ## v0.38.1 (2026-10-22): A Drum kit tab in Tracks; Drumie back on the kit
 
 **Tracks has two tabs.** "Instruments" keeps the song's tracks (Song, Vocals, Drums, Bass...) and
