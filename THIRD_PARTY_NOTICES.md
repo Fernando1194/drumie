@@ -9,6 +9,7 @@ software and models, each under its own license. Their licenses apply to them, n
 |---|---|---|
 | ADTOF drum transcription model (Mickaël Zehren, Marco Alunno, Paolo Bientinesi), PyTorch port by Xavier Riley | Finding every drum hit | Weights: **CC BY-NC-SA 4.0** (non-commercial, share-alike). Installed separately; the weights stay under their own license. |
 | Demucs (Alexandre Défossez, Meta AI), models htdemucs_6s and htdemucs_ft | Separating the drums from the song | MIT |
+| DrumSep MDX23C 6-stem model (aufr33 and jarredou), run with mdxnet-infer | Splitting the drum track into kick, snare, toms, hi-hat, ride and crash (optional) | Weights: **no published license**; treated as non-commercial. Downloaded on first use, not included. mdxnet-infer code: MIT |
 | Basic Pitch (Spotify) | Note transcription for other instruments (older page) | Apache 2.0 |
 
 ## Libraries and tools

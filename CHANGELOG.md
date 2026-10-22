@@ -4,6 +4,23 @@ Every version: what changed and why, with the measurement behind it when there i
 Design notes and all measurements in detail (Portuguese): [docs/PROJETO.md](docs/PROJETO.md).
 Every version here becomes a GitHub release automatically (tag + these notes): `.github/workflows/release.yml` runs on each push to main. `scripts/release.sh` is the manual fallback.
 
+## v0.38.0 (2026-10-22): Practice one piece
+
+**Split the drums into pieces.** In Tracks, "Split the drums" separates the drum track into kick,
+snare, toms, hi-hat, ride and crash, once per song, on request. Each piece gets its own volume
+strip under Drums (the Drums slider still moves them all). **Practice one piece** mutes that piece
+in the song so you play it, keeps the rest of the kit playing, and dims every other row of the
+drum grid so you only read your part; "Whole kit" puts everything back.
+
+It uses the DrumSep MDX23C model (`pip install mdxnet-infer`, 418 MB downloaded the first time). It
+is slow without a graphics card: about 10 times the song's length on two CPU cores. The split is
+good, not perfect: on MDB Drums the share of each hit that lands in its own track is kick 96%,
+snare 88%, toms 85%, hi-hat 79%, ride 76%, so a little snare is heard in the hi-hat and so on.
+Analyzing the song again drops the old split.
+
+Drumie's hands and feet now move without redrawing the kit (each limb is moved by the browser's
+compositor), which keeps playback smooth on slower machines.
+
 ## v0.37.2 (2026-10-13): The kit centred on the drummer
 
 The kit diagram is laid out around where the drummer sits: the snare in the middle, between the

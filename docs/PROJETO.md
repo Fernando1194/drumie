@@ -9,7 +9,7 @@ as batidas, acha padrões e passos, e oferece um player com kit, grade, modo Ste
 Hero" para bateria eletrônica via MIDI. O código também transcreve outros instrumentos, mas essa
 parte está congelada e escondida (`MUSIC_PRACTICE_ALL_INSTRUMENTS=1` mostra).
 
-Estado atual: **v37** (13/10/2026), publicado no GitHub. Foco: bateria.
+Estado atual: **v38** (22/10/2026), publicado no GitHub. Foco: bateria.
 
 ---
 
@@ -296,6 +296,14 @@ página não sabe com segurança quando foi fechada) e streaming (a separação 
   validados. Além disso, a TDX-N1 não tem pads para essas peças: elas ficam no áudio de
   acompanhamento.
 
+**Separar a bateria em peças (v38).** O drumsep, descartado para melhorar a transcrição (acima),
+entrou para outra coisa: praticar uma peça. Sob pedido, uma vez por música (~10x a duração em 2
+núcleos), gera 6 faixas Opus em `<música>/parts/`; o artefato `drums:parts` guarda a faixa de
+bateria de origem e fica inválido se a música for analisada de novo. Vazamento medido no MDB:
+bumbo 96%, caixa 88%, tons 85%, chimbal 79%, ride 76% da energia na faixa certa. Bom para mutar
+uma peça e tocar por cima; não é isolamento perfeito. Identificar o "tipo de kit" foi avaliado e
+adiado: sem caso real em que mudaria a transcrição.
+
 ### 4.9 Player
 - Página única: o áudio toca no navegador; Python só monta o HTML com os dados.
 - Mixer: cada faixa vira uma cópia Opus pequena, baixada inteira para a memória (o Chrome limita
@@ -483,3 +491,4 @@ python tests/benchmark_mdb.py drum_only             # precisão real (precisa do
 | v37 | Dificuldade 1-10 por música e nível (mãos/s, bumbo/s, síncope, viradas, variedade), coluna e ordenação na Biblioteca; Drumie toca no desenho do kit (antebraços, mãos R/L, baquetas, pés) com sticking de destro |
 | v37.1 | Drumie no kit só com antebraços, mãos, baquetas e pés flutuantes (sem corpo); batida mais visível |
 | v37.2 | Desenho do kit centrado no baterista: caixa no meio (entre as pernas), tons à frente, bumbo à direita |
+| v38 | Separar a bateria em peças (DrumSep, opcional, sob pedido) e "Praticar uma peça": muta a peça, o resto toca, a grade destaca a linha; volume por peça em Tracks; membros do Drumie movidos pelo compositor |

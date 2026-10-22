@@ -79,6 +79,9 @@ mixer (a volume, mute and solo per instrument, and presets) right there, in any 
   beat and turns fills into the groove, so you can play the whole song early on. The grid, the
   steps, the kit and the highway all follow the level. The easier levels also hide most of the
   AI's mistakes, which are mostly ghost notes and soft hits.
+- **Practice one piece**: split the drums into kick, snare, toms, hi-hat, ride and crash (optional
+  model), then mute just the piece you want to play while the rest of the kit keeps going; the grid
+  dims the other rows. Each piece also gets its own volume in Tracks.
 - **Fix transcription**: sensitivity per piece (kick, snare, hi-hat, toms, cymbals) and
   add/remove hits by clicking the grid. **Copy this bar to every repeat**: fix one bar and every
   other bar of the same groove gets the same hits. Your edits survive re-analysis.
@@ -146,6 +149,8 @@ It is built on other people's software and models, each under its own license:
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Notably:
 
 - **ADTOF** model weights: CC BY-NC-SA 4.0 (non-commercial). Installed separately.
+- **DrumSep** model weights (Practice one piece, optional): no published license; treated as
+  non-commercial. Downloaded on first use.
 - Demucs: MIT. Basic Pitch: Apache 2.0. Gradio: Apache 2.0. librosa: ISC.
 - MDB Drums (used only by the benchmark, not included): CC BY-NC-SA 4.0.
 
